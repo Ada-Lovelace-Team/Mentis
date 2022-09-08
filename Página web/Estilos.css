@@ -1,10 +1,48 @@
-h1 {
-  color: blue;
-  font-size: 15px;
-  font-weight: bold;
+#Contenedor {
+	margin: auto;
+	height: auto;
+	width: 80%;
+	background-color: rgb(130, 20, 250);
 }
 
-img{
- max-width: 100%;
- max-height: 100%;
+#Título {
+	text-align: center;
+	font-size: 60px;
+	font-weight: normal;
+	background-color: rgb(160, 220, 250);
+}
+
+#Contenedor2 {
+	text-align: center;
+	height: 500px;
+	width: 100%;
+	background-color: rgb(60, 20, 250);
+}
+
+#Menú {
+	height: 500px;
+	width: 30%;
+	float: left;
+	background-color: rgb(220, 220, 220);
+}
+
+#Fomularios {
+	height: 500px;
+	width: 70%;
+	float: right;
+	margin-top: 0px;
+	margin-right: 0px;
+	background-color: rgb(255, 255, 100);
+}
+
+p {
+	font-size: 30px;
+	font-weight: normal;
+  	margin-top: 30px;
+}
+
+img {
+	max-width: 100%;
+ 	max-height: 100%;
+ 	filter: brightness(120%);
 }

@@ -14,15 +14,18 @@ public class Empleado {
     @JoinColumn(name = "empresa_id")
     private Empresa empresa;
     private String cargo;
+    private String cedula;
 
     public Empleado() {
     }
 
-    public Empleado(String nombre, String correo, Empresa empresa, String cargo) {
+    public Empleado(int id, String nombre, String correo, Empresa empresa, String cargo, String cedula) {
+        this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.empresa = empresa;
         this.cargo = cargo;
+        this.cedula = cedula;
     }
 
     public int getId() {
@@ -49,6 +52,14 @@ public class Empleado {
         this.correo = correo;
     }
 
+    public Empresa getEmpresa() {
+        return empresa;
+    }
+
+    public void setEmpresa(Empresa empresa) {
+        this.empresa = empresa;
+    }
+
     public String getCargo() {
         return cargo;
     }
@@ -57,11 +68,11 @@ public class Empleado {
         this.cargo = cargo;
     }
 
-    public Empresa getEmpresa() {
-        return empresa;
+    public String getCedula() {
+        return cedula;
     }
 
-    public void setEmpresa(Empresa empresa) {
-        this.empresa = empresa;
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 }

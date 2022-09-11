@@ -13,28 +13,31 @@ public class EmpresaServicios {
     @Autowired
     EmpresaRepository empresaRepository;//creacion de un objeto tipo repositorio
     //metodo que me dice todas las empresas que tengo por medio de jpaRepository
-    public List<Empresa> getAllEmpresas(){
-        List<Empresa> empresaList = new ArrayList<>();
-        empresaRepository.findAll().forEach(empresa->empresaList.add(empresa));
+    //Retorna todas las empresas
+    public List <Empresa> getAllEmpresas(){
+        List <Empresa> empresaList = new ArrayList<>();
+        empresaRepository.findAll().forEach(empresa -> empresaList.add(empresa));
         return empresaList;
+
+    }
+    //metodo que genera un objeto de tipo empresa con el ID de la misma
+    public Empresa getEmpresaById(Integer id){
+        return empresaRepository.findById(id).get();
     }
 
+    // Guardar o actualizar
+    public Empresa saverOurdateEmpresa(Empresa empresa){
+        return empresaRepository.save(empresa);
 
-    public Empresa getEmpresaById(Integer id) {return empresaRepository.findById(id).get();}
-    //Metodo para guardar o actializar objetos de tipo empresa
-    public boolean saveOrUpdateEmpresa (Empresa empresa){
-        Empresa emp=empresaRepository.save(empresa);
-        if (empresaRepository.findById(emp.getId())!=null){
+    }
+    //Metodo para eliminar registros
+    public boolean deleteEmpresa(Integer id){
+        empresaRepository.deleteById(id);
+        if (empresaRepository.findById(id)==null){ //verificacion de eliminacion
             return true;
+
         }
         return false;
-    }
-    //Metodo que me permita eliminar una empresa
-    public boolean deleteEmpresa (Integer id) {
-        empresaRepository.deleteById(id);
-        if (getEmpresaById(id)!=null){
-            return false;
-        }
-        return true;
+
     }
 }

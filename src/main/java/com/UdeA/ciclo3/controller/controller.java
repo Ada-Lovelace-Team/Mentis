@@ -14,9 +14,9 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.List;
 
 
-@Controller
+//@Controller
 public class controller {
-    @Autowired
+   /* @Autowired
     EmpresaServicios empresaServicios;
 
     @GetMapping({"/","/verEmpresas"})
@@ -33,7 +33,7 @@ public class controller {
     }
     @PostMapping ("/GuardarEmpresa")
     public String guardarEmpresa(Empresa emp, RedirectAttributes redirectAttributes){
-        if (empresaServicios.saveOrUpdateEmpresa(emp)==true){
+        if (empresaServicios.saverOurdateEmpresa(emp)==true){
             return "redirect:/verEmpresas";
         }
         return "redirect:/AgregarEmpresa";
@@ -44,5 +44,7 @@ public class controller {
          model.addAttribute("emp",emp);
          return "editarEmpresa";
     }
+
+    */
 }
 

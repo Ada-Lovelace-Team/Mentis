@@ -1,9 +1,7 @@
 package com.UdeA.ciclo3.servicios;
 
 import com.UdeA.ciclo3.Modelos.Empleado;
-import com.UdeA.ciclo3.Modelos.Empresa;
 import com.UdeA.ciclo3.repo.EmpleadoRepository;
-import com.UdeA.ciclo3.repo.EmpresaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,5 +40,11 @@ public class EmpleadoServicios {
         return true;
 
     }
+
+    public ArrayList<Empleado> ObtenerPorEmpresa(Integer id) {
+
+        return null;
+    }
+
 
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class EmpresaServicios {
@@ -21,7 +22,7 @@ public class EmpresaServicios {
 
     }
     //metodo que genera un objeto de tipo empresa con el ID de la misma
-    public Empresa getEmpresaById(Integer id){
+    public Empresa getEmpresaById (Integer id){
         return empresaRepository.findById(id).get();
     }
 

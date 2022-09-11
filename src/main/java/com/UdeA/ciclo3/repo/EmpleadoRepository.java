@@ -7,6 +7,7 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.ArrayList;
 
 public interface EmpleadoRepository extends CrudRepository<Empleado,Integer> {
-    @Query("select e from Empleado e where e.empresa = ?1")
+
+    @Query(value = "SELECT *From empleado where e.empresa_id = ?1",nativeQuery = true)
     public abstract ArrayList<Empleado> findByEmpresa(Integer id);
 }
